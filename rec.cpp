@@ -13,10 +13,33 @@ void print1ton(int n){
     print1ton(n-1);
 }
 
+//Q-2 print n !
+
+int fact(int n){
+    if(n==0 || n==1) {
+        return 1;
+    }
+    return n*fact(n-1);    
+}
+
+//Q-3 sum of n num
+
+int sum(int n){
+    if(n==0) {
+        return 0;
+    }
+    return n+sum(n-1);    
+}
+
 int main(){
 
-    int n=10;
-    print1ton(n);
+    // print1ton(10);
+
+    // int factorial = fact(5);
+    // cout<<factorial;
+    
+    int ans = sum(5);
+    cout<<ans;
 
     return 0;
 }
