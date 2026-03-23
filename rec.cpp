@@ -30,6 +30,17 @@ int sum(int n){
     }
     return n+sum(n-1);    
 }
+//Q-4 only even num from 1 to n 
+
+int even(int n){
+    if(n==0) {
+        return 0 ;
+    }
+    if(n%2==0) 
+        return 1+ even(n-1);
+    else 
+        return even(n-1);
+}
 
 int main(){
 
@@ -38,7 +49,10 @@ int main(){
     // int factorial = fact(5);
     // cout<<factorial;
     
-    int ans = sum(5);
+    // int ans = sum(5);
+    // cout<<ans;
+
+    int ans = even( 10);
     cout<<ans;
 
     return 0;
